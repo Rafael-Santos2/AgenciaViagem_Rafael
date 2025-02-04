@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inria Serif';
+    list-style: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header{
+    background: #023059;
+    color: #FEF9F4;
+    padding: 15px;
+    text-align: center;
+}
+h1{
+    font-size: 2.5rem;
+    color: #FEF9F4;
+}
+h2{
+    font-size: 1.5rem;
+    color: #FEF9F4;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+nav a{
+    color: #FFFFFF;
+    opacity: 80%;
+    text-decoration: none;
+    font-weight: bold;
+}
+.container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: url(img/london.jpg) no-repeat center fixed;
+    background-size: cover;
+    position: relative; /* Necessário para o ::before funcionar corretamente */
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(41, 49, 59, 0.4); /* Cor #29313B com 40% de opacidade */
+    z-index: 0; /* Garante que fica atrás dos elementos filhos */
+}
+
+.sidebar{
+    flex: 1;
+    min-width: 200px;
+    background: #98B3C2;
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1;
+}
+.main-content{
+    flex: 2;
+    min-width: 300px;
+    padding: 15px;
+}
+.subtitle{
+    color: white;
+    font-size: 1.7rem;
+    z-index: 100;
+}
+.secondary{
+    flex: 1;
+    min-width: 200px;
+    background: #98B3C2;
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1;
+}
+li{
+    padding: 9px;
+}
+footer{
+    background: #023059;
+    color: #FFFFFF;
+    opacity: 80%;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input, button{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    z-index: 1;
+}
+input{
+    color: #FFFFFF;
+    background: #5D7CA6;
+}
+input::placeholder{
+    color: #FFFFFF;
+}
+button{
+    background: #03315A;
+    color:#FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+button:hover{
+    background: #1f5b90;
+}
+img{
+    width: 100%;
+    border-radius: 5px;
+}
+@media (max-width: 768px){
+    .container{
+        flex-direction: column;
+    }
+}
