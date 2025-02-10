@@ -37,6 +37,10 @@ nav a{
     opacity: 80%;
     text-decoration: none;
     font-weight: bold;
+    transition: ease 0.5s;
+}
+nav a:hover{
+    color: #7f99a7;
 }
 .container {
     display: flex;
@@ -92,7 +96,6 @@ li{
 footer{
     background: #023059;
     color: #FFFFFF;
-    opacity: 80%;
     text-align: center;
     padding: 10px;
     margin-top: auto;
